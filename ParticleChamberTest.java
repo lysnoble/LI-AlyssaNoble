@@ -7,9 +7,9 @@ import java.util.logging.Logger;
 import javax.swing.text.html.HTMLDocument.Iterator;
 
 public class ParticleChamberTest {
-    //keeps track of time / moves
+    //keeps track of time and moves
     int numMoves = 0;
-    //stores all locations to later display particles
+    //stores locations
     List<ArrayList<Integer>> particlePositionIntCache = new ArrayList<ArrayList<Integer>>();
     List<Particle> particles = new ArrayList<Particle>();
     int size;
@@ -114,7 +114,7 @@ public class ParticleChamberTest {
         return sb.toString();
     }
 
-    //This converts display grid record from integer (locations) to display X,.
+    //This converts display grid record from int (location) to X,.
     static String[] getDisplayGridIntArray(List<ArrayList<Integer>> particlePosCache, int chamberSize){
         String[] particleLevelsArr = new String[particlePosCache.size()];
         int intCounter=0;
